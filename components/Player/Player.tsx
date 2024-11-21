@@ -16,10 +16,10 @@ const url = 'https://tatarradio.hostingradio.ru/tatarradio320.mp3'
 const Player: FC<PlayerProps> = ({  }) => {
   const [isPlaying, setIsPlaying] = useState(false)
 
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null)
 
   useEffect(() => {
-
+    console.log('fff', audioRef.current)
     if (isPlaying) {
       audioRef.current?.play()
     } else {
