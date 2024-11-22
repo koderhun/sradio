@@ -1,10 +1,10 @@
-import { Metadata } from "@/Metadata";
-import "./globals.scss";
+import {Metadata} from '@/Metadata'
+import './globals.scss'
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="ru">
@@ -13,5 +13,5 @@ export default function RootLayout({
       </head>
       <body>{children}</body>
     </html>
-  );
+  )
 }

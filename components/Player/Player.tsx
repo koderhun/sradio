@@ -13,7 +13,7 @@ interface PlayerProps {
 
 const url = 'https://tatarradio.hostingradio.ru/tatarradio320.mp3'
 
-const Player: FC<PlayerProps> = ({  }) => {
+export const Player: FC<PlayerProps> = ({  }) => {
   const [isPlaying, setIsPlaying] = useState(false)
 
   const audioRef = useRef<HTMLAudioElement>(null)
@@ -40,5 +40,3 @@ const Player: FC<PlayerProps> = ({  }) => {
     </div>
   )
 }
-
-export default Player;
