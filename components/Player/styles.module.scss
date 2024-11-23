@@ -1,0 +1,32 @@
+.wrapper {
+  height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.btn {
+  border-radius: 50%;
+  padding: 20px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.play {
+  // transform: translateX(6px);
+}
+
+.btnGroup {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

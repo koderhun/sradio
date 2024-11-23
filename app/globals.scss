@@ -2,6 +2,9 @@
   --background: #ffffff;
   --primary: #07a22d;
   --text-color: #0a0a0a;
+
+  --header-height: 60px;
+  --max-width: 1200px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -110,5 +113,30 @@ a {
 
   &:hover {
     color: dark(var(--primary), 5%);
+  }
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+.content {
+  display: block;
+  height: calc(100vh - var(--header-height));
+}
+
+hr {
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
   }
 }
