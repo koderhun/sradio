@@ -1,5 +1,6 @@
 import {Metadata} from '@/Metadata'
 import './globals.scss'
+import {Header} from '@/components'
 
 export default function RootLayout({
   children,
@@ -11,7 +12,12 @@ export default function RootLayout({
       <head>
         <Metadata />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="wrapper">
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
