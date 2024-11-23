@@ -1,6 +1,7 @@
 'use client'
 
 import {FC, useEffect, useRef, useState} from 'react'
+import {metatext} from '@/Metadata'
 import Image from 'next/image'
 import PlayImage from '@/public/icons/play.svg'
 import PauseImage from '@/public/icons/pause.svg'
@@ -30,7 +31,7 @@ export const Player: FC<PlayerProps> = ({}) => {
     <div className={s.wrapper}>
       <div className={s.container}>
         <audio src={url} ref={audioRef} />
-        <h1 className={s.title}>Татар Радиосы Сергач 91.4 FM</h1>
+        <h1 className={s.title}>{metatext.title}</h1>
         <div className={s.btnGroup}>
           <button type="button" className={s.btn} onClick={() => setIsPlaying(!isPlaying)}>
             {isPlaying ? (

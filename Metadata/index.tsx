@@ -1,19 +1,22 @@
+export const metatext = {
+  title: 'Татар Радиосы Сергач 91.4 FM',
+}
+
 export const metadata = {
-  title: 'PWA with Next 14',
-  description: 'PWA application with Next 14',
+  title: metatext.title,
+  description: 'Создано в учебных целях',
   generator: 'Next.js',
   manifest: '/manifest.json',
   keywords: ['nextjs', 'nextjs14', 'next14', 'pwa', 'next-pwa'],
   themeColor: [{media: '(prefers-color-scheme: dark)', color: '#fff'}],
   authors: [
-    {name: 'Alldo Faiz Ramadhani'},
+    {name: 'Koderhun'},
     {
-      name: 'Alldo Faiz Ramadhani',
-      url: 'https://www.linkedin.com/in/alldofaiz/',
+      name: 'Koderhun',
+      url: 'https://www.github.com/koderhun/',
     },
   ],
-  viewport:
-    'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
+  viewport: 'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
   icons: [
     {rel: 'apple-touch-icon', url: 'icons/icon-128x128.png'},
     {rel: 'icon', url: 'icons/icon-128x128.png'},
@@ -24,6 +27,7 @@ export const Metadata = () => {
   return (
     <>
       <title>{metadata.title}</title>
+      <link rel="icon" href="favicon.svg" type="image/svg" />
       <meta name="description" content={metadata.description} />
       <meta name="generator" content={metadata.generator} />
       <link rel="manifest" href={metadata.manifest} />
@@ -32,12 +36,7 @@ export const Metadata = () => {
         <meta key={index} name="theme-color" media={media} content={color} />
       ))}
       {metadata.authors.map(({name, url}, index) => (
-        <meta
-          key={index}
-          name="author"
-          content={name}
-          {...(url && {href: url})}
-        />
+        <meta key={index} name="author" content={name} {...(url && {href: url})} />
       ))}
       <meta name="viewport" content={metadata.viewport} />
       {metadata.icons.map(({rel, url}, index) => (
