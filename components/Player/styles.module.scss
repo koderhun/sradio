@@ -30,3 +30,14 @@
   flex-direction: column;
   gap: 15px;
 }
+
+.loader {
+  transform: scaleX(-1);
+  padding: 50px;
+}
+
+.audioTag {
+  width: 0;
+  height: 0;
+  z-index: -1;
+}

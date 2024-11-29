@@ -6,7 +6,7 @@ export const metadata = {
   title: metatext.title,
   description: 'Создано в учебных целях',
   generator: 'Next.js',
-  manifest: '/manifest.webmanifest',
+  manifest: '/manifest.json',
   keywords: ['nextjs', 'nextjs14', 'next14', 'pwa', 'next-pwa'],
   themeColor: [{media: '(prefers-color-scheme: dark)', color: '#fff'}],
   authors: [
