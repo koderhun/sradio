@@ -1,7 +1,8 @@
 :root {
   --background: #ffffff;
-  --primary: #07a22d;
+  --primary-color: #07a22d;
   --text-color: #0a0a0a;
+  --danger-color: #dc3545;
 
   --header-height: 60px;
   --max-width: 1200px;
@@ -105,15 +106,17 @@ video {
 body {
   color: var(--text-color);
   background: var(--background);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,
+    Helvetica, sans-serif;
   font-size: 16px;
 }
 
 a {
-  color: var(--primary);
+  color: var(--primary-color);
 
   &:hover {
-    color: dark(var(--primary), 5%);
+    color: dark(var(--primary-color), 5%);
   }
 }
 

@@ -12,10 +12,11 @@
   border: 0;
   background: transparent;
   cursor: pointer;
-}
 
-.play {
-  // transform: translateX(6px);
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
 }
 
 .btnGroup {
@@ -32,8 +33,18 @@
 }
 
 .loader {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waiting {
+  color: var(--danger-color);
+}
+
+.loaderImage {
   transform: scaleX(-1);
-  padding: 50px;
 }
 
 .audioTag {

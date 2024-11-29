@@ -15,6 +15,7 @@ const url = 'https://tatarradio.hostingradio.ru/tatarradio320.mp3'
 export const Player: FC<PlayerProps> = ({}) => {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
+  const [isWaiting, setIsWaiting] = useState(false)
 
   const audioRef = useRef<HTMLAudioElement>(null)
 
@@ -26,38 +27,72 @@ export const Player: FC<PlayerProps> = ({}) => {
     }
   }, [isPlaying])
 
-  useEffect(() => {
-    const audioProgress = () => {
-      setIsLoading(false)
-    }
-    audioRef.current?.addEventListener('loadeddata', audioProgress)
+  const canPlayHandler = (e: any) => {
+    setIsLoading(false)
+  }
 
-    return () => {
-      audioRef.current?.removeEventListener('loadeddata', audioProgress)
-    }
-  }, [audioRef])
+  const waitingHandler = (e: any) => {
+    setIsWaiting(true)
+  }
 
   const title = isPlaying ? 'pause' : 'play'
 
   return (
     <div className={s.wrapper}>
       <div className={s.container}>
-        <audio className={s.audioTag} controls preload='auto' src={url} ref={audioRef} />
+        <audio
+          onCanPlay={canPlayHandler}
+          onLoadedMetadata={canPlayHandler}
+          onWaiting={waitingHandler}
+          className={s.audioTag}
+          controls
+          preload="auto"
+          src={url}
+          ref={audioRef}
+        />
+        <div className={s.loader}>
+          {isWaiting && !isLoading && (
+            <div className={s.waiting}>Не удалось загрузить аудио</div>
+          )}
+
+          {isLoading && (
+            <Image
+              className={s.loaderImage}
+              src={SpinImage}
+              alt="Loading"
+              title="Loading"
+              width={60}
+              height={60}
+            />
+          )}
+        </div>
         <h1 className={s.title}>{metatext.title}</h1>
         <div className={s.btnGroup}>
-          {isLoading ? (
-            <div className={s.loader}>
-              <Image className={s.pause} src={SpinImage} alt='Loading' title='Loading' width={60} height={60} />
-            </div>
-          ) : (
-            <button type="button" className={s.btn} onClick={() => setIsPlaying     (!isPlaying)}>
-              {isPlaying ? (
-                <Image className={s.pause} src={PauseImage} alt={title} title={title} width={60} height={60} />
-              ) : (
-                <Image className={s.play} src={PlayImage} alt={title} title={title} width={60} height={60} />
-              )}
-            </button>
-          )}
+          <button
+            type="button"
+            className={s.btn}
+            disabled={isLoading}
+            onClick={() => setIsPlaying(!isPlaying)}>
+            {isPlaying ? (
+              <Image
+                className={s.pause}
+                src={PauseImage}
+                alt={title}
+                title={title}
+                width={60}
+                height={60}
+              />
+            ) : (
+              <Image
+                className={s.play}
+                src={PlayImage}
+                alt={title}
+                title={title}
+                width={60}
+                height={60}
+              />
+            )}
+          </button>
         </div>
       </div>
     </div>
