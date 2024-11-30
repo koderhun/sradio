@@ -25,6 +25,7 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,
     Helvetica, sans-serif;
   font-size: 16px;
+  line-height: 1.2;
 }
 
 a {
@@ -36,18 +37,28 @@ a {
 }
 
 .container {
-  padding: 0 15px;
+  padding: 0 1rem;
   margin: 0 auto;
   max-width: var(--max-width);
 }
 
 .content {
   display: block;
-  height: calc(100vh - var(--header-height));
+  margin: 1rem auto;
+  padding: 0 1rem 1rem 1rem;
+  height: calc(100vh - var(--header-height) - 2rem);
 }
 
 hr {
-  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5em;
 }
 
 @media (max-width: 768px) {
