@@ -1,7 +1,8 @@
 import {FC} from 'react'
 import Image from 'next/image'
 import classnames from 'classnames'
-import LogoImage from '@/public/icons/sradio.svg'
+import {metadata} from '@/Metadata'
+import LogoImage from '@/public/favicon.svg'
 import s from './styles.module.scss'
 
 interface HeaderProps {}
@@ -15,10 +16,9 @@ export const Header: FC<HeaderProps> = ({}) => {
           <a href={process.env.NEXT_PUBLIC_URL} className={s.logo}>
             <Image
               src={LogoImage}
-              alt="logo"
-              title="logo"
+              alt={metadata.logoTitle}
+              title={metadata.logoTitle}
               width={40}
-              className={s.image}
             />
           </a>
         </div>

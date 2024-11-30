@@ -22,6 +22,7 @@ export const metadata = {
     {rel: 'apple-touch-icon', url: 'pwa_icons/icon-128x128.png'},
     {rel: 'icon', url: 'pwa_icons/icon-128x128.png'},
   ],
+  logoTitle: 'Татар Радиосы Сергач 91.4 FM',
 }
 
 export const Metadata = () => {
