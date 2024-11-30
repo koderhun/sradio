@@ -7,6 +7,7 @@ import s from './styles.module.scss'
 interface HeaderProps {}
 
 export const Header: FC<HeaderProps> = ({}) => {
+  console.log('NEXT_PUBLIC_URL', process.env.NEXT_PUBLIC_URL)
   return (
     <header className={s.header}>
       <div className={classnames(s.container, 'container')}>
