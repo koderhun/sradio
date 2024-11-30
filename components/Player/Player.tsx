@@ -41,8 +41,7 @@ export const Player: FC<PlayerProps> = ({}) => {
     <div className={s.wrapper}>
       <div className={s.container}>
         <audio
-          onCanPlay={canPlayHandler}
-          onLoadedMetadata={canPlayHandler}
+          onCanPlayThrough={canPlayHandler}
           onWaiting={waitingHandler}
           className={s.audioTag}
           controls
