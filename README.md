@@ -1,7 +1,10 @@
-## Радио 
+## Радио
 
 Ссылка на трансляцию откуда берется поток
 [Татар радиосы](https://top-radio.ru/sergach/tatar-radiosyi)
+
+Ссылка на рабочий протатип
+[https://sradio.vercel.app/](https://sradio.vercel.app/)
 
 Проект создан исключительно в ознакомительных и учебных целях
 
@@ -20,4 +23,3 @@ pnpm dev
 # or
 bun dev
 ```
-

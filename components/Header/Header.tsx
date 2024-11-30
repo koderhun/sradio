@@ -11,8 +11,14 @@ export const Header: FC<HeaderProps> = ({}) => {
     <header className={s.header}>
       <div className={classnames(s.container, 'container')}>
         <div className={s.left}>
-          <a href={process.env.NEXT_PUBLIC_BASE_URL} className={s.logo}>
-            <Image src={LogoImage} alt="logo" title="logo" width={40} className={s.image} />
+          <a href={process.env.NEXT_PUBLIC_URL} className={s.logo}>
+            <Image
+              src={LogoImage}
+              alt="logo"
+              title="logo"
+              width={40}
+              className={s.image}
+            />
           </a>
         </div>
         <div className={s.right}>

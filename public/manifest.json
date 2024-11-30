@@ -1,8 +1,9 @@
 {
+  "background_color": "#ffffff",
+  "categories": ["media"],
   "name": "Сергач Радио 91.4",
   "short_name": "Сергач Радио 91.4",
   "theme_color": "#07a22d",
-  "background_color": "#fff",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
