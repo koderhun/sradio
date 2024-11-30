@@ -16,16 +16,18 @@ export const metadata = {
       url: 'https://www.github.com/koderhun/',
     },
   ],
-  viewport: 'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
+  viewport:
+    'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
   icons: [
-    {rel: 'apple-touch-icon', url: 'icons/icon-128x128.png'},
-    {rel: 'icon', url: 'icons/icon-128x128.png'},
+    {rel: 'apple-touch-icon', url: 'pwa_icons/icon-128x128.png'},
+    {rel: 'icon', url: 'pwa_icons/icon-128x128.png'},
   ],
 }
 
 export const Metadata = () => {
   return (
     <>
+      <meta charSet="UTF-8" />
       <title>{metadata.title}</title>
       <link rel="icon" href="favicon.svg" type="image/svg" />
       <meta name="description" content={metadata.description} />
@@ -36,7 +38,12 @@ export const Metadata = () => {
         <meta key={index} name="theme-color" media={media} content={color} />
       ))}
       {metadata.authors.map(({name, url}, index) => (
-        <meta key={index} name="author" content={name} {...(url && {href: url})} />
+        <meta
+          key={index}
+          name="author"
+          content={name}
+          {...(url && {href: url})}
+        />
       ))}
       <meta name="viewport" content={metadata.viewport} />
       {metadata.icons.map(({rel, url}, index) => (
