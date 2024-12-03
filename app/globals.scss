@@ -3,11 +3,13 @@
 :root {
   --background: #ffffff;
   --primary-color: #07a22d;
+  --primary-dark-color: #00691a;
   // --text-color: #0a0a0a;
   --text-color: #fff;
   --danger-color: #dc3545;
   --border-color: #cccccc9c;
   --link-color: var(--primary-color);
+  --link-hover-color: var(--primary-dark-color);
 
   --header-height: 60px;
   --header-bg: #ffffffb5;
@@ -22,6 +24,7 @@
     --header-bg: #0000009c;
 
     --link-color: #ffffff;
+    --link-hover-color: #b1b1b1;
   }
 }
 
@@ -43,8 +46,9 @@ body {
 a {
   color: var(--link-color);
 
+  &:focus,
   &:hover {
-    color: dark(var(--link-color), 5%);
+    color: var(--link-hover-color);
   }
 }
 
