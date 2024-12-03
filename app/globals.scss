@@ -3,11 +3,14 @@
 :root {
   --background: #ffffff;
   --primary-color: #07a22d;
-  --text-color: #0a0a0a;
+  // --text-color: #0a0a0a;
+  --text-color: #fff;
   --danger-color: #dc3545;
   --border-color: #cccccc9c;
+  --link-color: var(--primary-color);
 
   --header-height: 60px;
+  --header-bg: #ffffffb5;
   --max-width: 1200px;
   --shadow-btn: 1px 1px 1px #80808073;
 }
@@ -16,6 +19,9 @@
   :root {
     --background: #0a0a0a;
     --text-color: #f9f9f9;
+    --header-bg: #0000009c;
+
+    --link-color: #ffffff;
   }
 }
 
@@ -35,10 +41,10 @@ body {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--link-color);
 
   &:hover {
-    color: dark(var(--primary-color), 5%);
+    color: dark(var(--link-color), 5%);
   }
 }
 
