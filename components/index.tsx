@@ -1,2 +1,2 @@
-export * from "./Player/Player";
-export * from "./Header/Header";
+export * from './Player/Player'
+export * from './Header/Header'
