@@ -3,9 +3,9 @@
 import {FC, useEffect, useRef, useState} from 'react'
 import {metatext} from '@/Metadata'
 import Image from 'next/image'
-import PlayImage from '@/public/icons/play.svg'
-import PauseImage from '@/public/icons/pause.svg'
-import SpinImage from '@/public/spinning.svg'
+import PlayImage from '@/public/pictures/play.svg'
+import PauseImage from '@/public/pictures/pause.svg'
+import SpinImage from '@/public/pictures/spinning.svg'
 import s from './styles.module.scss'
 
 interface PlayerProps {}
@@ -71,8 +71,7 @@ export const Player: FC<PlayerProps> = ({}) => {
             type="button"
             className={s.btn}
             disabled={isLoading}
-            onClick={() => setIsPlaying(!isPlaying)}
-          >
+            onClick={() => setIsPlaying(!isPlaying)}>
             {isPlaying ? (
               <Image
                 className={s.pause}
