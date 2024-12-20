@@ -16,7 +16,7 @@ export const metadata = {
     },
   ],
   logoTitle: metatext.title,
-  picturePath: '/',
+  picturePath: 'pictures/',
 }
 
 export const Metadata = () => {
