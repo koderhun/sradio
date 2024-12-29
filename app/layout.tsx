@@ -1,7 +1,7 @@
-import './globals.scss'
-
-import {Header} from '@/components'
 import {Metadata} from '@/Metadata'
+import {Header} from '@/components'
+
+import './globals.scss'
 
 export default function RootLayout({
   children,

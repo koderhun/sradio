@@ -1,12 +1,13 @@
 'use client'
-import PlayImage from '@/public/pictures/play.svg'
 
 import Image from 'next/image'
+
 import type {FC} from 'react'
 import {useEffect, useRef, useState} from 'react'
 
 import {metatext} from '@/Metadata'
 import PauseImage from '@/public/pictures/pause.svg'
+import PlayImage from '@/public/pictures/play.svg'
 import SpinImage from '@/public/pictures/spinning.svg'
 
 import s from './styles.module.scss'
