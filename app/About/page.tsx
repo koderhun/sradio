@@ -1,4 +1,5 @@
-import {FC} from 'react'
+import type {FC} from 'react'
+
 import s from './styles.module.scss'
 
 interface AboutProps {}
