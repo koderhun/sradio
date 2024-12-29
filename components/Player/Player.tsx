@@ -75,8 +75,7 @@ export const Player: FC<PlayerProps> = ({}) => {
             type="button"
             className={s.btn}
             disabled={isLoading}
-            onClick={() => setIsPlaying(!isPlaying)}
-          >
+            onClick={() => setIsPlaying(!isPlaying)}>
             {isPlaying ? (
               <Image
                 className={s.pause}
