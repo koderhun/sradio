@@ -1,9 +1,9 @@
+import LogoImage from '@/public/pictures/logo.svg'
 import classnames from 'classnames'
 import Image from 'next/image'
 import type {FC} from 'react'
 
 import {metadata} from '@/Metadata'
-import LogoImage from '@/public/pictures/logo.svg'
 
 import s from './styles.module.scss'
 
