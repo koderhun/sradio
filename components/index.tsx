@@ -1,2 +1,2 @@
-export * from './Header/Header'
-export * from './Player/Player'
+export {Header} from './Header/Header'
+export {Player} from './Player/Player'

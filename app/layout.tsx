@@ -3,11 +3,11 @@ import {Header} from '@/components'
 
 import './globals.scss'
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode
-}>) {
+}>) => {
   return (
     <html lang="ru">
       <head>
@@ -22,3 +22,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+export default RootLayout

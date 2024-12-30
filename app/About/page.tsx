@@ -2,9 +2,7 @@ import type {FC} from 'react'
 
 import s from './styles.module.scss'
 
-interface AboutProps {}
-
-const About: FC<AboutProps> = ({}) => {
+const About: FC = () => {
   return (
     <div className={s.content}>
       <h1>О нас</h1>

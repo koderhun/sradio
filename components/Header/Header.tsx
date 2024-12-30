@@ -8,9 +8,7 @@ import LogoImage from '@/public/pictures/logo.svg'
 
 import s from './styles.module.scss'
 
-interface HeaderProps {}
-
-export const Header: FC<HeaderProps> = ({}) => {
+export const Header: FC = () => {
   console.log('NEXT_PUBLIC_URL', process.env.NEXT_PUBLIC_URL)
   return (
     <header className={s.header}>

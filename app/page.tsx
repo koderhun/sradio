@@ -1,5 +1,7 @@
 import {Player} from '@/components'
 
-export default function Home() {
+const Home = () => {
   return <Player />
 }
+
+export default Home

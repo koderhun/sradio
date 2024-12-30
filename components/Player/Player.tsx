@@ -12,11 +12,9 @@ import SpinImage from '@/public/pictures/spinning.svg'
 
 import s from './styles.module.scss'
 
-interface PlayerProps {}
-
 const url = 'https://tatarradio.hostingradio.ru/tatarradio320.mp3'
 
-export const Player: FC<PlayerProps> = ({}) => {
+export const Player: FC = () => {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const [isWaiting, setIsWaiting] = useState(false)
@@ -31,11 +29,11 @@ export const Player: FC<PlayerProps> = ({}) => {
     }
   }, [isPlaying])
 
-  const canPlayHandler = (e: any) => {
+  const canPlayHandler = () => {
     setIsLoading(false)
   }
 
-  const waitingHandler = (e: any) => {
+  const waitingHandler = () => {
     setIsWaiting(true)
   }
 
