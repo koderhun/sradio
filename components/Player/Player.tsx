@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 
-import type {FC} from 'react'
 import {useEffect, useRef, useState} from 'react'
+import type {FC} from 'react'
 
 import {metatext} from '@/Metadata'
 import PauseImage from '@/public/pictures/pause.svg'

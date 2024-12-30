@@ -1,6 +1,11 @@
 {
-  "extends": "@logux/stylelint-config",
+  "extends": ["stylelint-config-standard"],
   "rules": {
-    "function-disallowed-list": ["rgb", "rgba", "hsl", "hsla"]
-  }
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+    "selector-max-id": 0,
+    "selector-class-pattern": null,
+    "unit-allowed-list": ["%", "deg", "rem", "ms", "dvh"]
+  },
+  "defaultSeverity": "warning"
 }
