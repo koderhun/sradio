@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import classnames from 'classnames'
 import type {FC} from 'react'
+import Link from 'next/link'
 
 import {metadata} from '@/Metadata'
 import LogoImage from '@/public/pictures/logo.svg'
@@ -25,9 +26,9 @@ export const Header: FC = () => {
         </div>
         <div className={s.right}>
           <nav className={s.nav}>
-            <a href="/" className={s.link}>
+            <Link href="/" className={s.link}>
               Радио
-            </a>
+            </Link>
             <a href="/About" className={s.link}>
               О нас
             </a>
