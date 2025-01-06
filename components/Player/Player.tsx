@@ -6,8 +6,6 @@ import {useEffect, useRef, useState} from 'react'
 import type {FC} from 'react'
 
 import {metatext} from '@/Metadata'
-import PauseImage from '@/public/pictures/pause.svg'
-import PlayImage from '@/public/pictures/play.svg'
 import SpinImage from '@/public/pictures/spinning.svg'
 
 import s from './styles.module.scss'
@@ -72,28 +70,10 @@ export const Player: FC = () => {
           <button
             type="button"
             className={s.btn}
+            role={title}
             disabled={isLoading}
-            onClick={() => setIsPlaying(!isPlaying)}>
-            {isPlaying ? (
-              <Image
-                className={s.pause}
-                src={PauseImage}
-                alt={title}
-                title={title}
-                width={60}
-                height={60}
-              />
-            ) : (
-              <Image
-                className={s.play}
-                src={PlayImage}
-                alt={title}
-                title={title}
-                width={60}
-                height={60}
-              />
-            )}
-          </button>
+            onClick={() => setIsPlaying(!isPlaying)}
+          ></button>
         </div>
       </div>
     </div>
