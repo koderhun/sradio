@@ -1,3 +1,5 @@
+$img: '/pictures/';
+
 .wrapper {
   height: calc(100vh - var(--header-height));
   display: flex;
@@ -11,11 +13,22 @@
   border: 0;
   cursor: pointer;
   background: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   &:disabled {
     opacity: 0.2;
     cursor: not-allowed;
   }
+}
+
+.btnPlay {
+  background-image: url($img + 'play.svg');
+}
+
+.btnPause {
+  background-image: url($img + 'pause.svg');
 }
 
 .btnGroup {

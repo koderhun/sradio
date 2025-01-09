@@ -68,9 +68,10 @@ export const Player: FC = () => {
         <h1 className={s.title}>{metatext.title}</h1>
         <div className={s.btnGroup}>
           <button
+            className={[s.btn, isPlaying ? s.btnPause : s.btnPlay].join(' ')}
             type="button"
-            className={s.btn}
             role={title}
+            title={title}
             disabled={isLoading}
             onClick={() => setIsPlaying(!isPlaying)}
           ></button>
